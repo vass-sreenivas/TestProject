@@ -1,7 +1,8 @@
 package com.example.beans;
 
-
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 
 public class Employee {
 	
@@ -10,17 +11,23 @@ public class Employee {
 		System.out.println("Employee Bean is Created");
 	}
 	
-	
+	@Value("1")
 	private int id;
 
+	@Value("Sreenivas")
 	private String firstName;
 	
+	@Value("Guttula")
 	private String lastName;
 	
+	@Value("SMSCountry")
 	private String companyName;
 	
 	private String CTC;
 	
+	private Address address;
+	
+
 
 	public Employee(int id, String firstName, String lastName, String companyName, String CTC) {
 		this.id = id;
@@ -80,7 +87,14 @@ public class Employee {
 		this.CTC = cTC;
 	}
 
-		
-	
+
+	public Address getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
 }

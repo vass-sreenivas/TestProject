@@ -23,11 +23,14 @@ public class DemoApplication {
 		
 		Employee e1=(Employee)context.getBean("emp1");
 		System.out.println(e1.getFirstName());
+		System.out.println(e1.getId());
+		
+		System.out.println(e1.getAddress().getCity());
 		
 		Employee e2=(Employee)context.getBean("emp2");
 		System.out.println(e2.getFirstName());
 		
-		
+		System.out.println(e2.getAddress().getCity());
 		
 	}
 

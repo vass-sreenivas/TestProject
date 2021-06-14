@@ -24,7 +24,7 @@ public class EmployeeController{
 		
 	}
 	
-	@GetMapping("/hello")
+	@RequestMapping(method = {RequestMethod.GET},value="/hello")
 	public String hello(){
 		return "hello";
 	}

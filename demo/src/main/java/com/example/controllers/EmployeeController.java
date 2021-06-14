@@ -24,6 +24,10 @@ public class EmployeeController{
 		
 	}
 	
+	@GetMapping("/hello")
+	public String hello(){
+		return "hello";
+	}
 	
 	@RequestMapping(method = {RequestMethod.GET},value="/emp/list")
 	public Map<?,?> employees(){
